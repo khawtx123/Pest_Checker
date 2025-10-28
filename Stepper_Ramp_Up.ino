@@ -2,11 +2,13 @@
 #define DIR_PIN 6  // Check with stepper driver
 #define STEP_PIN 7 // Check with stepper driver
 
-#define LS_PIN 1
-#define LED_PIN 4
+#define LS_PIN 1  // Limit Switch Pin
+#define LED_PIN 4 // LED Switch Pin
 
-#define delay_time 20
-#define delay_time_ceil 70
+#define delay_time 20       // Adjust Ramp up to this freq, -> higher -> faster sweeper ramps up 
+#define delay_time_ceil 70 // Adjust Ramp up from this freq, -> higher -> slower sweeper ramps up 
+
+#define sweeper_stop_time 2000 // Adjust for sweeper off time
 
 void setup() {
   // put your setup code here, to run once:
@@ -31,13 +33,13 @@ void loop() {
       digitalWrite(STEP_PIN, HIGH);
       delayMicroseconds(i);
       limit = digitalRead(LS_PIN); 
-      i = 0.5*i*log(i); // Non linear func for gradual increase in pwm freq
+      i = 0.5*i*log(i); //Non-linear func for gradual increase in pwm freq
     }
 
   }
 
   digitalWrite(EN_PIN, HIGH);
   digitalWrite(LED_PIN, HIGH);
-  delay(2000);
+  delay(sweeper_stop_time);
   digitalWrite(LED_PIN, LOW);
 }
