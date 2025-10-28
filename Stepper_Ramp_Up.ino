@@ -31,7 +31,7 @@ void loop() {
       digitalWrite(STEP_PIN, HIGH);
       delayMicroseconds(i);
       limit = digitalRead(LS_PIN); 
-      i = 0.5*i*log(i);
+      i = 0.5*i*log(i); // Non linear func for gradual increase in pwm freq
     }
 
   }
