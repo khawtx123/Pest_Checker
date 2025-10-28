@@ -2,8 +2,8 @@
 #define DIR_PIN 6  // Check with stepper driver
 #define STEP_PIN 7 // Check with stepper driver
 
-#define LS_PIN 1
-#define LED_PIN 4
+#define LS_PIN 1  // Limit Switch Pin
+#define LED_PIN 4 // LED Switch Pin
 
 #define delay_time 30 // Adjust this for sweeper speed
 #define sweeper_stop_time 2000 // Adjust for sweeper off time
