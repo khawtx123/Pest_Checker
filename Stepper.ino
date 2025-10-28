@@ -2,7 +2,6 @@
 #define STEP_PIN 13
 #define EN_PIN 14
 #define LS_PIN 27
-#define stepsPerRevolution 1600
 #define delay_time 900
 
 void setup() {
