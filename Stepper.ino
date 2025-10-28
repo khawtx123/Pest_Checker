@@ -19,7 +19,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   digitalWrite(EN_PIN, LOW);
   bool limit = digitalRead(LS_PIN);
 
