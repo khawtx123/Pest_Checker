@@ -5,7 +5,8 @@
 #define LS_PIN 1
 #define LED_PIN 4
 
-#define delay_time 30
+#define delay_time 30 // Adjust this for sweeper speed
+#define sweeper_stop_time 2000 // Adjust for sweeper off time
 
 void setup() {
   // put your setup code here, to run once:
@@ -32,6 +33,6 @@ void loop() {
 
   digitalWrite(EN_PIN, HIGH);
   digitalWrite(LED_PIN, HIGH);
-  delay(2000);
+  delay(sweeper_stop_time);
   digitalWrite(LED_PIN, LOW);
 }
