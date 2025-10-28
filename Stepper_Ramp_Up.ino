@@ -1,6 +1,6 @@
-#define EN_PIN 5
-#define DIR_PIN 6
-#define STEP_PIN 7
+#define EN_PIN 5   // Check with stepper driver
+#define DIR_PIN 6  // Check with stepper driver
+#define STEP_PIN 7 // Check with stepper driver
 
 #define LS_PIN 1
 #define LED_PIN 4
